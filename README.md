@@ -1,4 +1,4 @@
-🚀 ## Internship Track
+🚀 # Internship Track
 ### Future Interns – Data Science & Analytics
 
 FUTURE_DS_01 – Business Sales Performance Analytics
