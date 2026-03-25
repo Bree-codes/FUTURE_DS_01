@@ -52,4 +52,9 @@ The analysis identifies key revenue drivers and growth opportunities. By focusin
 
 ## Screenshots
 <img width="1301" height="593" alt="Screenshot from 2026-03-25 14-19-18" src="https://github.com/user-attachments/assets/aae5fe53-bf8d-42da-90d9-dc0f9aea9bb8" />
+<img width="1301" height="593" alt="Screenshot from 2026-03-25 14-19-26" src="https://github.com/user-attachments/assets/ff0aca52-64a9-41ad-9fdf-4b7c675a3fa6" />
+<img width="1301" height="593" alt="Screenshot from 2026-03-25 14-19-32" src="https://github.com/user-attachments/assets/b9a82538-2d57-4bdc-a3e1-618e8719efa9" />
+<img width="1301" height="593" alt="Screenshot from 2026-03-25 14-19-43" src="https://github.com/user-attachments/assets/f7490338-3d81-4bc5-95d0-db2ae2568c15" />
+
+
 
