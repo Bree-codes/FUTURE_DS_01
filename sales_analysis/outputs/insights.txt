@@ -1,8 +1,33 @@
 
-    ===============================
-    📊 EXECUTIVE SUMMARY
-    ===============================
-    Total Revenue: 8911407.904
-    Top Product: PAPER CRAFT , LITTLE BIRDIE
-    Top Region: United Kingdom
-    
+===============================
+📊 EXECUTIVE SUMMARY
+===============================
+The business generated a total revenue of 8911407.90.
+The top-performing product is "PAPER CRAFT , LITTLE BIRDIE", and the leading region is United Kingdom.
+
+===============================
+🔍 KEY INSIGHTS
+===============================
+- The top product "PAPER CRAFT , LITTLE BIRDIE" contributes significantly to overall revenue.
+- United Kingdom dominates sales, indicating strong market demand in this region.
+
+- Top 5 Products by Revenue:
+
+  • PAPER CRAFT , LITTLE BIRDIE: 168469.60
+  • REGENCY CAKESTAND 3 TIER: 142592.95
+  • WHITE HANGING HEART T-LIGHT HOLDER: 100448.15
+  • JUMBO BAG RED RETROSPOT: 85220.78
+  • MEDIUM CERAMIC TOP STORAGE JAR: 81416.73
+
+===============================
+💡 BUSINESS RECOMMENDATIONS
+===============================
+- Increase inventory and marketing efforts for top-performing products.
+- Expand operations in high-performing regions to maximize revenue.
+- Investigate underperforming products and optimize pricing or promotion strategies.
+- Monitor monthly sales trends to identify growth opportunities and seasonality patterns.
+
+===============================
+📈 CONCLUSION
+===============================
+The analysis highlights key revenue drivers and growth opportunities. Strategic focus on high-performing products and regions can significantly improve overall business performance.

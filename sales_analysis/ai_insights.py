@@ -3,15 +3,41 @@ import os
 def generate_ai_insights(results):
 
     insights = f"""
-    ===============================
-    📊 EXECUTIVE SUMMARY
-    ===============================
-    Total Revenue: {results['total_revenue']}
-    Top Product: {results['top_product']}
-    Top Region: {results['top_region']}
-    """
+===============================
+📊 EXECUTIVE SUMMARY
+===============================
+The business generated a total revenue of {results['total_revenue']:.2f}.
+The top-performing product is "{results['top_product']}", and the leading region is {results['top_region']}.
 
-    # ✅ Create outputs folder if it doesn't exist
+===============================
+🔍 KEY INSIGHTS
+===============================
+- The top product "{results['top_product']}" contributes significantly to overall revenue.
+- {results['top_region']} dominates sales, indicating strong market demand in this region.
+
+- Top 5 Products by Revenue:
+"""
+
+    for product, value in results["top_5_products"].items():
+        insights += f"\n  • {product}: {value:.2f}"
+
+    insights += """
+
+===============================
+💡 BUSINESS RECOMMENDATIONS
+===============================
+- Increase inventory and marketing efforts for top-performing products.
+- Expand operations in high-performing regions to maximize revenue.
+- Investigate underperforming products and optimize pricing or promotion strategies.
+- Monitor monthly sales trends to identify growth opportunities and seasonality patterns.
+
+===============================
+📈 CONCLUSION
+===============================
+The analysis highlights key revenue drivers and growth opportunities. Strategic focus on high-performing products and regions can significantly improve overall business performance.
+"""
+
+    # Ensure outputs folder exists
     os.makedirs("outputs", exist_ok=True)
 
     # Save insights
@@ -19,37 +45,3 @@ def generate_ai_insights(results):
         f.write(insights)
 
     return insights
-
-# from openai import OpenAI
-#
-# client = OpenAI()
-#
-# def generate_ai_insights(results):
-#
-#     prompt = f"""
-#     You are a senior business data analyst.
-#
-#     Based on the following data:
-#     - Total Revenue: {results['total_revenue']}
-#     - Top Product: {results['top_product']}
-#     - Top Region: {results['top_region']}
-#     - Monthly Sales: {results['monthly_sales']}
-#     - Top 5 Products: {results['top_5_products']}
-#
-#     Provide:
-#     1. Executive Summary
-#     2. Key Insights
-#     3. Business Recommendations
-#     """
-#
-#     response = client.chat.completions.create(
-#         model="gpt-5",
-#         messages=[{"role": "user", "content": prompt}]
-#     )
-#
-#     insights = response.choices[0].message.content
-#
-#     with open("outputs/insights.txt", "w") as f:
-#         f.write(insights)
-#
-#     return insights
