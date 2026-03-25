@@ -50,3 +50,6 @@ Monitor monthly sales trends to identify growth opportunities and seasonal patte
 ## Conclusion
 The analysis identifies key revenue drivers and growth opportunities. By focusing on high performing products and regions, the business can optimize its operations and improve overall performance. The interactive Streamlit dashboard provides stakeholders with real time insights for informed decision-making.
 
+## Screenshots
+<img width="1301" height="593" alt="Screenshot from 2026-03-25 14-19-18" src="https://github.com/user-attachments/assets/aae5fe53-bf8d-42da-90d9-dc0f9aea9bb8" />
+
