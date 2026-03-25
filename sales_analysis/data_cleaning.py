@@ -1,23 +1,33 @@
 import pandas as pd
+import os
 
 def clean_data(file_path):
-    df = pd.read_csv(file_path)
+    df = pd.read_csv(file_path, encoding='latin1')
 
     # Standardize column names
     df.columns = df.columns.str.lower().str.strip()
 
-    # Handle missing values
-    df = df.dropna()
-
     # Convert date column
-    if 'date' in df.columns:
-        df['date'] = pd.to_datetime(df['date'])
+    df['invoicedate'] = pd.to_datetime(df['invoicedate'])
 
-    # Ensure numeric columns
-    if 'sales' in df.columns:
-        df['sales'] = pd.to_numeric(df['sales'], errors='coerce')
-
+    # Remove missing values
     df = df.dropna()
+
+    # Remove negative or zero values (important for this dataset)
+    df = df[(df['quantity'] > 0) & (df['unitprice'] > 0)]
+
+    # ✅ Create SALES column
+    df['sales'] = df['quantity'] * df['unitprice']
+
+    # Rename columns for consistency
+    df = df.rename(columns={
+        'invoicedate': 'date',
+        'description': 'product',
+        'country': 'region'
+    })
+
+    # Create folder if needed
+    os.makedirs("data/processed", exist_ok=True)
 
     # Save cleaned data
     df.to_csv("data/processed/cleaned_sales.csv", index=False)

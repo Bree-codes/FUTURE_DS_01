@@ -27,4 +27,12 @@ def analyze_data(df):
         .to_dict()
     )
 
+    # Revenue by country
+    results["sales_by_region"] = (
+        df.groupby("region")["sales"].sum()
+        .sort_values(ascending=False)
+        .head(5)
+        .to_dict()
+    )
+
     return results
