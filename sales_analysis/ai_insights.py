@@ -1,41 +1,24 @@
+import os
+
 def generate_ai_insights(results):
+
     insights = f"""
     ===============================
     📊 EXECUTIVE SUMMARY
     ===============================
-    The business generated a total revenue of {results['total_revenue']}.
-    The top-performing product is {results['top_product']}, while the leading region is {results['top_region']}.
-
-    ===============================
-    🔍 KEY INSIGHTS
-    ===============================
-    - The highest revenue contribution comes from {results['top_product']}, indicating strong product-market fit.
-    - {results['top_region']} is the best-performing region, suggesting higher demand or better market penetration.
-
-    - Top 5 products by revenue:
+    Total Revenue: {results['total_revenue']}
+    Top Product: {results['top_product']}
+    Top Region: {results['top_region']}
     """
 
-    for product, value in results["top_5_products"].items():
-        insights += f"\n  • {product}: {value}"
+    # ✅ Create outputs folder if it doesn't exist
+    os.makedirs("outputs", exist_ok=True)
 
-    insights += f"""
-
-    ===============================
-    💡 RECOMMENDATIONS
-    ===============================
-    - Increase investment in {results['top_product']} to maximize revenue growth.
-    - Expand operations and marketing in {results['top_region']} to capitalize on strong performance.
-    - Analyze lower-performing products to identify improvement opportunities.
-    - Maintain consistent monitoring of monthly sales trends to detect growth opportunities.
-
-    """
-
-    # Save to file
+    # Save insights
     with open("outputs/insights.txt", "w") as f:
         f.write(insights)
 
     return insights
-
 
 # from openai import OpenAI
 #

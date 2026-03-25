@@ -15,7 +15,7 @@ def analyze_data(df):
     )
 
     # Monthly revenue
-    df["month"] = df["date"].dt.to_period("M")
+    df["month"] = df["date"].dt.to_period("M").dt.to_timestamp()
     monthly_sales = df.groupby("month")["sales"].sum()
 
     results["monthly_sales"] = monthly_sales.to_dict()
