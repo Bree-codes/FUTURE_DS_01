@@ -17,6 +17,9 @@ Programming & Analysis: Python (Pandas, Matplotlib, Seaborn)
 Dashboarding & Visualization: Streamlit, Plotly
 Environment: Pycharm IDE
 
+## Live Demo
+project link: https://futureds01-cqhh2iy3rr77demgez9dtb.streamlit.app/
+
 ## Analysis Performed
 Data cleaning, preprocessing, and validation
 Exploratory Data Analysis (EDA) to identify patterns and anomalies
